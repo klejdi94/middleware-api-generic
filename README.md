@@ -9,7 +9,7 @@
 1) Run mongo compose on dir docker-image
 2) Start the project
 
-###Create fast entities : 
+### Create fast entities : 
 
 model> YourEntity
 
@@ -22,7 +22,7 @@ handler> YourHandler
 config.routes> YourEntityConfig
 
 
-###Api exposed : 
+### Api exposed : 
 
 GET/POST/PUT/DELETE/PATCH : localhost:9090/api/v1/{entity}/{entityId}
 

@@ -1,0 +1,61 @@
+app:
+
+server:
+  port: 9090
+
+spring:
+
+  application:
+    name: Generic BE
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      username: test
+      password: test
+      database: test
+      authentication-database: admin
+  jackson:
+    date-format: "yyyy-MM-dd'T'HH:mm:ss.SSSX"
+    serialization:
+      write-dates-as-timestamps: false
+      WRITE_DATES_AS_TIMESTAMPS: false
+      indent-output: true
+    locale: it_IT
+    time-zone: GMT+1
+
+
+management:
+  server:
+    port: 9091
+  endpoints:
+    web:
+      enable: true
+      exposure:
+        include:
+          - health
+          - info
+          - prometheus
+  health:
+    probes:
+      enabled: true
+  metrics:
+    enable:
+      all: true
+    tags.service: ${spring.application.name}
+
+#debug: true
+logging:
+  level:
+    root: INFO
+    reactor.netty.http.client: DEBUG
+
+reactor:
+  ipc:
+    netty: DEBUG
+
+middleware:
+  api:
+    path: "/api/{version}"
+    ver: "v1"

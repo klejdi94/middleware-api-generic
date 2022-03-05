@@ -8,7 +8,12 @@ import it.generic.middleware.model.GenericEntityI;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.reactive.function.server.ServerRequest;
+import org.springframework.web.reactive.function.server.ServerResponse;
+import reactor.core.publisher.Mono;
 
 @RestController
 @AllArgsConstructor
@@ -55,4 +60,10 @@ public class TestHandler extends AbstractGenericEntityHandler {
         return TestConfig.Paths.Parameters.ID;
     }
 
+    public Mono<ServerResponse> getHello(ServerRequest serverRequest) {
+        return ServerResponse
+                .status(HttpStatus.OK)
+                .contentType(MediaType.APPLICATION_JSON)
+                .bodyValue("Welcome, start using this middleware demo project, start at /api/v1/test , Enjoy!");
+    }
 }

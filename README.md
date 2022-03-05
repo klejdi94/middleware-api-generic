@@ -26,5 +26,8 @@ config.routes> YourEntityConfig
 
 GET/POST/PUT/DELETE/PATCH : localhost:9090/api/v1/{entity}/{entityId}
 
+DEMO:
+https://middleware-api-kk.herokuapp.com/api/v1/test
+
 actuator: localhost:9091/actuator 
 

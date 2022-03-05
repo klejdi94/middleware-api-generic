@@ -10,12 +10,8 @@ spring:
 
   data:
     mongodb:
-      host: localhost
-      port: 27017
-      username: test
-      password: test
-      database: test
-      authentication-database: admin
+      uri: ${MONGO_DB_URL}
+
   jackson:
     date-format: "yyyy-MM-dd'T'HH:mm:ss.SSSX"
     serialization:

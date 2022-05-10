@@ -117,7 +117,7 @@ public abstract class AbstractApiService implements GenericApiService<GenericEnt
     @Override
     public Mono<Void> deleteIfExist(String id) {
         return getIfExist(id)
-                .flatMap(kouplyEntity -> getRepository().deleteById(id));
+                .flatMap(genericEntity -> getRepository().deleteById(id));
     }
 
     /**

@@ -1,5 +1,8 @@
 #  API Generic Middleware
 
+[![CI](https://github.com/klejdi94/middleware-api-generic/actions/workflows/main.yml/badge.svg)](https://github.com/klejdi94/middleware-api-generic/actions/workflows/main.yml)
+[![CodeQL](https://github.com/klejdi94/middleware-api-generic/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/klejdi94/middleware-api-generic/actions/workflows/codeql-analysis.yml)
+
 * Java 11
 * Spring WebFlux
 * Reactive programming

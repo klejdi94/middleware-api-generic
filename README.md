@@ -35,3 +35,12 @@ https://middleware-api-kk.herokuapp.com/api/v1/test
 actuator: localhost:9091/actuator 
 
 
+PS.
+Insert into your env: 
+DOCKER_HUB_USERNAME
+DOCKER_HUB_ACCESS_TOKEN 
+MONGO_DB_URL 
+
+
+
+
